@@ -1,0 +1,3 @@
+Clase = es el elementó que se crea a partir de cosas reales (personas, animales, aves) que tienen sub-elementos (personas = rut, nombre, apellido, etc. -> elementos de persona)
+
+Objetos = es la información que tendrá la clase, es decir que un objeto yace de la clase.
