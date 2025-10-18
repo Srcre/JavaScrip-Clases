@@ -53,4 +53,5 @@ let circulo = function(){
 
 let triangulo = function() {
     let r = parseFloat(document.getElementById("lado").value);
+    
 }

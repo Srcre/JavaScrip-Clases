@@ -38,7 +38,7 @@ class Persona{
     }
 
     get getImc(){
-        this.setImc();
+        this.setImc();   
         return this.imc;
     }
 
@@ -73,7 +73,7 @@ let addPersona = function () {
 }
 
 /*
-Tarea:
+Tarea: no dijo nada el profe
 */
 
 
