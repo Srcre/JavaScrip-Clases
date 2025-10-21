@@ -38,7 +38,7 @@ class Persona{
     }
 
     get getImc(){
-        this.setImc();   
+        this.setImc();
         return this.imc;
     }
 
@@ -62,18 +62,39 @@ let lista = [];
 let addPersona = function () {
     p1 = new Persona();
 
-    p1.rut = prompt("Agregar Rut");
-    p1.nombre = prompt("Agregar un Nombre: ");
-    p1.edad = parseInt(prompt("Agregar Edad: "));
-    p1.estatura = parseFloat(prompt("Agregar Estatura: "))
-    p1.peso = parseFloat(prompt("Agregar Peso: "));
+    p1.rut = document.getElementById("rut").value;
+    p1.nombre = document.getElementById("nombre").value;
+    p1.edad = parseInt(document.getElementById("edad").value);
+    p1.estatura = parseFloat(document.getElementById("estatura").value);
+    p1.peso = parseFloat(document.getElementById("peso").value);
 
-    lista.push(p1);
+    lista.push(p1); //Agregar un objeto a una lista
     console.log(lista);
 }
 
+let findPersona = function(){
+    let b = document.getElementById("rut-b").value;
+    
+    let obj = lista.find(x => x.getRut == b);
+
+    if (obj != undefined){
+        console.log(obj)
+        document.getElementById("r-nom").innerHTML = "Nombre: " + obj.getNombre;
+        document.getElementById("r-edad").innerHTML = "Edad: " + obj.getEdad;
+        document.getElementById("r-peso").innerHTML = "Peso: " + obj.getPeso;
+        document.getElementById("r-est").innerHTML = "Estatura: " + obj.getEstatura;
+        document.getElementById("r-imc").innerHTML = "IMC: " + obj.getImc;
+    }else{
+        console.log("no encontrado")
+    }
+
+}
+
+
+
 /*
-Tarea: no dijo nada el profe
+Tarea 1: usar lo aprendido pero hacerlo en un formulario
+Tarea 2: agregar una clase especialista y que tenga una regla la cual sea la siguiente: una persona debe de ser atentida por un especialista
 */
 
 
