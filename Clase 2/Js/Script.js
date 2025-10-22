@@ -45,7 +45,7 @@ class Persona{
     setImc(){
         this.imc = this.peso / Math.pow(this.estatura,2);
     }
-
+    
     /*
 
     saludo(){
@@ -55,6 +55,36 @@ class Persona{
 
     */
     
+}
+
+class Especialista{
+    constructor(rut, nombre,  edad, peso, estatura){
+        this.rut = rut,
+        this.nombre = nombre,
+        this.edad = edad,
+        this.peso = peso,
+        this.estatura = estatura
+    }
+
+    get getRut(){
+        return this.rut;
+    }
+
+    get getNombre(){
+        return this.nombre;
+    }
+
+    get getEdad(){
+        return this.edad;
+    }
+
+    get getPeso(){
+        return this.peso;
+    }
+
+    get getEstatura(){
+        return this.estatura;
+    }
 }
 
 let lista = [];
@@ -70,6 +100,7 @@ let addPersona = function () {
 
     lista.push(p1); //Agregar un objeto a una lista
     console.log(lista);
+    alert("Se agrego correctamente :D ")
 }
 
 let findPersona = function(){
