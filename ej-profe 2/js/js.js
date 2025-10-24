@@ -66,11 +66,11 @@ class persona{
 
 var arrPersona = []; //Arreglo para personas.
 
-var pers = new persona("1-1", "Jhon", "Doe",35);//Crear objeto.
+var pers = new persona("1-1", "Jhon", "Doe",35); //Crear objeto.
 
 arrPersona.push(pers); // Agregar objeto en lista 
 
-//Para agregar un titular a un vehiculo, primero buscamos al titual en la lista creada
+//Para agregar un titular a un vehiculo, primero buscamos al titular en la lista creada
 var titular1 = arrPersona.find(i => i.rut == "1-1"); //cambiar el "1-1" por el valor que necesitan.
 
 var v1 = new Vehiculo(

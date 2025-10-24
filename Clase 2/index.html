@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="Js/Script.js"></script>
 </head>
+
 <body>
-    
-    <fieldset><legend>Agregar</legend>
+
+    <fieldset>
+        <legend>Agregar</legend>
         <form action="POST">
             <input type="text" name="rut" id="rut" placeholder="Rut">
             <br>
+            <br>
             <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+            <br>
             <br>
             <input type="text" name="edad" id="edad" placeholder="Edad">
             <br>
+            <br>
             <input type="text" name="peso" id="peso" placeholder="Peso">
             <br>
+            <br>
             <input type="text" name="estatura" id="estatura" placeholder="Estatura">
+            <br>
             <br>
         </form>
         <button onclick="addPersona()">Agregar</button>
     </fieldset>
-    
-    <fieldset><legend>Buscar por Rut!</legend>
+
+    <fieldset>
+        <legend>Buscar por Rut!</legend>
         <input type="text" name="rut-b" id="rut-b" placeholder="Rut a Buscar">
+        <br>
+        <br>
         <button onclick="findPersona()">Buscar</button>
     </fieldset>
 
-    <fieldset><legend>Resultado de busqueda</legend>
+    <fieldset>
+        <legend>Resultado de busqueda</legend>
         <div>
             <h3 id="r-nom">Nombre:<span></span></h3>
             <h3 id="r-edad">Edad:<span></span></h3>
@@ -38,6 +50,30 @@
             <h3 id="r-imc">IMC:<span></span></h3>
         </div>
     </fieldset>
-</div>
+
+    <fieldset>
+        <legend>Atencion al cliente</legend>
+        <form action="POST">
+            <input type="text" name="rutE" id="rutE" placeholder="Rut">
+            <br>
+            <br>
+            <input type="text" name="nombreE" id="nombreE" placeholder="Nombre">
+            <br>
+            <br>
+            <input type="text" name="edadE" id="edadE" placeholder="Edad">
+        </form>
+        <br>
+        <button onclick="agregarEspecialista()">Agregar</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Buscar especialista por nombre: </legend>
+        <input type="text" name="nombre-e" id="nombre-e" placeholder="Nombre a buscar">
+        <br>
+        <br>
+        <button onclick="buscarEspecialista()">Buscar especialista</button>
+    </fieldset>
+    </div>
 </body>
+
 </html>

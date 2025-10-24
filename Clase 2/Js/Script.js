@@ -58,32 +58,22 @@ class Persona{
 }
 
 class Especialista{
-    constructor(rut, nombre,  edad, peso, estatura){
-        this.rut = rut,
-        this.nombre = nombre,
-        this.edad = edad,
-        this.peso = peso,
-        this.estatura = estatura
+    constructor(rutE, nombreE,  edadE){
+        this.rut = rutE,
+        this.nombre = nombreE,
+        this.edad = edadE
     }
 
-    get getRut(){
+    get getRutE(){
         return this.rut;
     }
 
-    get getNombre(){
+    get getNombreE(){
         return this.nombre;
     }
 
-    get getEdad(){
+    get getEdadE(){
         return this.edad;
-    }
-
-    get getPeso(){
-        return this.peso;
-    }
-
-    get getEstatura(){
-        return this.estatura;
     }
 }
 
@@ -100,7 +90,7 @@ let addPersona = function () {
 
     lista.push(p1); //Agregar un objeto a una lista
     console.log(lista);
-    alert("Se agrego correctamente :D ")
+    alert("La persona se agrego correctamente :D ")
 }
 
 let findPersona = function(){
@@ -109,7 +99,7 @@ let findPersona = function(){
     let obj = lista.find(x => x.getRut == b);
 
     if (obj != undefined){
-        console.log(obj)
+        console.log(obj);
         document.getElementById("r-nom").innerHTML = "Nombre: " + obj.getNombre;
         document.getElementById("r-edad").innerHTML = "Edad: " + obj.getEdad;
         document.getElementById("r-peso").innerHTML = "Peso: " + obj.getPeso;
@@ -121,10 +111,37 @@ let findPersona = function(){
 
 }
 
+let listaE = [];
+
+let agregarEspecialista = function (){
+    pE = new Especialista();
+
+    pE.rut = document.getElementById("rutE").value;
+    pE.nombre = document.getElementById("nombreE").value;
+    pE.edad = parseInt(document.getElementById("edadE").value);
+    
+    listaE.push(pE);
+    console.log(pE);
+    alert("El especialista se agrego correctamente");
+}
+
+let buscarEspecialista= function (){
+    let e = document.getElementById("nombre-e").value;
+
+    let objE = listaE.find(x => x.getNombreE == e);
+
+    if (objE !== undefined) {
+        console.log(objE);
+        alert("Especialista Encontrado: " + objE.getNombreE);
+    }else{
+        alert("No encontrado D:")
+    }
+}
+
 
 
 /*
-Tarea 1: usar lo aprendido pero hacerlo en un formulario
+Tarea 1: usar lo aprendido pero hacerlo en un formulario (Completo)
 Tarea 2: agregar una clase especialista y que tenga una regla la cual sea la siguiente: una persona debe de ser atentida por un especialista
 */
 

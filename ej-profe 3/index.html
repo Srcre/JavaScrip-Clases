@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Agregar Persona</legend>
+            <input type="text" name="rut" id="rut" placeholder="Rut">
+            <br>
+            <input type="text" name="nom" id="nom" placeholder="Nombre">
+            <br>
+            <input type="text" name="edad" id="edad" placeholder="Edad">
+            <br>
+            <input type="text" name="peso" id="peso" placeholder="Peso">
+            <br>
+            <input type="text" name="est" id="est" placeholder="Estatura">
+            <br>
+            <input type="button" onclick="addPersona()" value="Agregar">
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>Buscar por Rut</legend>
+            <input type="text" name="rut-b" id="rut-b" placeholder="Rut a Buscar">
+            <input type="button" onclick="findPersona()" value="Buscar">
+        </fieldset>
+    </form>
+
+    <div>
+        <h3>Nombre: <span id="nombre"></span></h3>
+    </div>
+
+</body>
+
+</html>
