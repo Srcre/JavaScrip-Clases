@@ -13,7 +13,8 @@ class Persona{
         this.edad = edad,
         this.peso = peso,
         this.estatura = estatura,
-        this.imc = 0
+        this.imc = 0,
+        this.Especialista = null;
 
     }
 
@@ -42,8 +43,20 @@ class Persona{
         return this.imc;
     }
 
+    get getEspecialista(){
+        return this.Especialista;
+    }
+
+    setEspecialista(){
+        this.especialista = Especialista;
+    }
+
     setImc(){
         this.imc = this.peso / Math.pow(this.estatura,2);
+    }
+
+    setEspecialista(especialista){
+        this.especialista = especialista;
     }
     
     /*
@@ -91,6 +104,19 @@ let addPersona = function () {
     lista.push(p1); //Agregar un objeto a una lista
     console.log(lista);
     alert("La persona se agrego correctamente :D ")
+
+    let nombreEsp = document.getElementById("especialista-nom").value;
+    let espAsignado = listaE.find(x => x.getNombreE === nombreEsp);
+
+    if (espAsignado != undefined) {
+        p1.setEspecialista(espAsignado);
+        lista.push(p1);
+        console.log(lista);
+        alert("La persona se agrego correctamente con un especialista asginado :D");
+
+    }else{
+        alert("Especialista no encontrado: Porfavor agrega uno primero");
+    }
 }
 
 let findPersona = function(){
@@ -105,6 +131,13 @@ let findPersona = function(){
         document.getElementById("r-peso").innerHTML = "Peso: " + obj.getPeso;
         document.getElementById("r-est").innerHTML = "Estatura: " + obj.getEstatura;
         document.getElementById("r-imc").innerHTML = "IMC: " + obj.getImc;
+
+        if (obj.getEspecialista) {
+            document.getElementById("r-especialista").innerHTML = "Especialista: " + obj.getEspecialista.getNombreE;
+        }else{
+            document.getElementById("r-especialista").innerHTML = "Especialista: No asignado"; 
+        }
+
     }else{
         console.log("no encontrado")
     }
