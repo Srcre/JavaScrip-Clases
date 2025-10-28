@@ -1,10 +1,29 @@
-function mostrarVariables() {
-    let rut = document.getElementById("rutInput").value;  // String
-    let edad = parseInt(document.getElementById("edadInput").value);  // Numero
-    let esAdulto = edad >= 18;  // Verdadero o falso
 
-    document.getElementById("resultado").innerHTML = 
-        "RUT: " + rut + " (tipo: " + typeof rut + ")<br>" +
-        "Edad: " + edad + " (tipo: " + typeof edad + ")<br>" +
-        "Es adulto: " + esAdulto + " (tipo: " + typeof esAdulto + ")";
+const Dolar_a_Peso = 900;
+
+class Mascota {
+    constructor(id, nombre, tipo, edad, raza, Dueño) {
+        this.id = id,
+        this.nombre = nombre,
+        this.tipo = tipo,
+        this.edad = parseInt(edad),
+        this.raza = raza,
+        this.dueño = Dueño;
+    }
+
+    
+}
+
+class Veterinario {
+    constructor(id, nombre, especialidad) {
+        this.id = id,
+        this.nombre = nombre,
+        this.especialidad = especialidad;
+    }
+}
+
+class Consulta {
+    constructor(id, mascota, veterinario, fecha, diagnostico, tratamiento,) {
+        
+    }
 }
