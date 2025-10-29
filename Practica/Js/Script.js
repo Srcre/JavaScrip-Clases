@@ -24,6 +24,12 @@ class Veterinario {
 
 class Consulta {
     constructor(id, mascota, veterinario, fecha, diagnostico, tratamiento,) {
-        
+        this.id = id,
+        this.mascot = mascota,
+        this.veterinario = veterinario,
+        this.fecha = fecha,
+        this.diagnostico = diagnostico,
+        this.tratamiento = tratamiento
     }
 }
+
